@@ -1,7 +1,7 @@
 {
   "name": "@dy-kit/util-core",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "packageManager": "pnpm@10.6.2",
   "description": "常用的核心包,可用于浏览器或node环境",
   "author": "XiaDeYu <1579883916@qq.com>",
