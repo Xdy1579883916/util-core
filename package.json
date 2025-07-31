@@ -1,32 +1,35 @@
 {
-  "name": "pkg-placeholder",
+  "name": "@dy-kit/util-core",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@10.6.2",
-  "description": "_description_",
+  "description": "常用的核心包,可用于浏览器或node环境",
   "author": "XiaDeYu <1579883916@qq.com>",
   "license": "MIT",
-  "homepage": "https://github.com/Xdy1579883916/pkg-placeholder#readme",
+  "homepage": "https://github.com/Xdy1579883916/util-core#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Xdy1579883916/pkg-placeholder.git"
+    "url": "git+https://github.com/Xdy1579883916/util-core.git"
   },
-  "bugs": "https://github.com/Xdy1579883916/pkg-placeholder/issues",
+  "bugs": "https://github.com/Xdy1579883916/util-core/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {
-    ".": "./dist/index.mjs",
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
     "./package.json": "./package.json"
   },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.mts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.cts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
-    "dev": "unbuild --stub",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
     "lint": "eslint",
     "prepublishOnly": "nr build",
     "release": "bumpp && pnpm publish",
@@ -39,6 +42,12 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "dependencies": {
+    "dayjs": "catalog:",
+    "es-toolkit": "catalog:",
+    "klona": "catalog:",
+    "nanoid": "catalog:"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:cli",
     "@antfu/ni": "catalog:cli",
@@ -49,12 +58,10 @@
     "lint-staged": "catalog:cli",
     "simple-git-hooks": "catalog:cli",
     "tinyexec": "catalog:utils",
+    "tsdown": "catalog:cli",
     "tsx": "catalog:cli",
     "typescript": "catalog:cli",
-    "unbuild": "catalog:cli",
-    "vite": "catalog:cli",
     "vitest": "catalog:testing",
-    "vitest-package-exports": "catalog:testing",
     "yaml": "catalog:testing"
   },
   "simple-git-hooks": {
