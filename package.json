@@ -44,14 +44,15 @@
   },
   "dependencies": {
     "dayjs": "catalog:",
-    "es-toolkit": "catalog:",
     "klona": "catalog:",
+    "lodash-es": "catalog:",
     "nanoid": "catalog:"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:cli",
     "@antfu/ni": "catalog:cli",
     "@antfu/utils": "catalog:inlined",
+    "@types/lodash-es": "catalog:types",
     "@types/node": "catalog:types",
     "bumpp": "catalog:cli",
     "eslint": "catalog:cli",

@@ -1,4 +1,4 @@
-import { clone as _clone, cloneDeep } from 'es-toolkit'
+import { clone as _clone, cloneDeep } from 'lodash-es'
 import { expect, it } from 'vitest'
 import { clone } from './index'
 

@@ -1,4 +1,4 @@
-import { curry, filter, first, get, isBoolean, isNil, isNumber } from 'es-toolkit/compat'
+import { curry, filter, first, get, isBoolean, isNil, isNumber } from 'lodash-es'
 
 type TParseFun = (...arg: any) => unknown
 
